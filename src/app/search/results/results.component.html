@@ -1,0 +1,7 @@
+<div class="results-container">
+  <virtual-scroller #scroll [items]="buffer" (vsEnd)="fetchMore($event)">
+    <div *ngFor="let item of scroll.viewPortItems" class="image">
+      <img [src]="item.src.medium" (click)="openDialog(item)">
+    </div>
+  </virtual-scroller>
+</div>

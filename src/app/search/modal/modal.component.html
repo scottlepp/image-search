@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>{{data.photographer}}</h2>
+<mat-dialog-content class="mat-typography">
+  <img [src]="data.src.large">
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <a mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="downloadImage(data)">Download</a>
+</mat-dialog-actions>
